@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7ebf26db5ec9041726185c2cf8ec5105f952e929bb173d2079b118bec2266f9b
-size 369
+from .modeling import SKLearnWrapper
+
+
+class SetFitPipeline:
+    def __init__(self, model_name_or_path) -> None:
+        base_model = SKLearnWrapper()
+        base_model.load(model_name_or_path)
+        self.model = base_model
+
+    def __call__(self, inputs, *args, **kwargs):
+        model_outputs = self.model.predict(inputs)
+        return model_outputs
