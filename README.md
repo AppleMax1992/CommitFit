@@ -1,8 +1,11 @@
 # CommitFit
+
+## Environment
 Code demo for paper Boosting Commit Classification with Contrastive Learning
 In order to easily reproduce our method, we use ```pip freeze > requirements.txt``` to output the packages used in our experimental environment.
 you can try ```pip install -r requirements.txt``` to obtain the similar environment with us.
 
+## Datasets
 The datasets we used can be find from the dataset folder 
 Commit_datasets.csv is the dataset with 3 labels, you can also find download it straight from https://zenodo.org/record/4266643#.X6vERuLPxPY
 
