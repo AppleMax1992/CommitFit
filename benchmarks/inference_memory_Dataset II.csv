@@ -1,0 +1,9 @@
+model,batch_size,sequence_length,result
+O-3-best,16,8,1945
+O-3-best,16,32,1965
+O-3-best,16,128,2081
+O-3-best,16,512,2685
+O-all-3-best,16,8,2861
+O-all-3-best,16,32,2879
+O-all-3-best,16,128,2999
+O-all-3-best,16,512,3607

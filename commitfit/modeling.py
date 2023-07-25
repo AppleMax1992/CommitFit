@@ -426,12 +426,25 @@ class CommitFitModel(PyTorchModelHubMixin):
 
     def predict_proba(self, x_test: List[str], as_numpy: bool = False) -> Union[torch.Tensor, "ndarray"]:
         embeddings = self.model_body.encode(
-            x_test,
-            normalize_embeddings=self.normalize_embeddings,
-            convert_to_tensor=self.has_differentiable_head,
+                x_test,
+                normalize_embeddings=self.normalize_embeddings,
+                convert_to_tensor=self.has_differentiable_head,
         )
+        feature_type = type(test_code_change)
+        if((test_code_change is not None) and (feature_type == np.ndarray)):
+            binary_embeddings = test_code_change
+            final_embeddings = np.concatenate((embeddings, binary_embeddings), axis=1)
+        elif(feature_type == list):
+            code_embeddings = self.model_body.encode(
+                    test_code_change,
+                    normalize_embeddings=self.normalize_embeddings,
+                    convert_to_tensor=self.has_differentiable_head,
+            )
+            final_embeddings = np.concatenate((embeddings, code_embeddings), axis=1)
+        else:
+            final_embeddings = embeddings
 
-        outputs = self.model_head.predict_proba(embeddings)
+        outputs = self.model_head.predict_proba(final_embeddings)
         return self._output_type_conversion(outputs, as_numpy=as_numpy)
 
     def to(self, device: Union[str, torch.device]) -> "CommitFitModel":

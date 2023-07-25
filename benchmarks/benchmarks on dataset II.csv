@@ -1,0 +1,9 @@
+﻿model,sequence_length,time,memory
+O-3-best,8,0.016,1945
+O-3-best,32,0.0159,1965
+O-3-best,128,0.0262,2081
+O-3-best,512,0.1217,2685
+O-all-3-best,8,0.0264,2861
+O-all-3-best,32,0.0268,2879
+O-all-3-best,128,0.083,2999
+O-all-3-best,512,0.3621,3607

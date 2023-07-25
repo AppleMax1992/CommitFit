@@ -1,0 +1,21 @@
+transformers_version,4.30.2
+framework,PyTorch
+use_torchscript,False
+framework_version,2.0.0+cu118
+python_version,3.8.10
+system,Linux
+cpu,x86_64
+architecture,64bit
+date,2023-07-24
+time,08:03:06.408922
+fp16,False
+use_multiprocessing,True
+only_pretrain_model,False
+cpu_ram_mb,128801
+use_gpu,True
+num_gpus,1
+gpu,NVIDIA GeForce RTX 3090
+gpu_ram_mb,24576
+gpu_power_watts,350.0
+gpu_performance_state,0
+use_tpu,False
