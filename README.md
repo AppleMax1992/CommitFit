@@ -11,7 +11,7 @@ Commit_datasets.csv is the dataset with 3 labels, you can also find download it 
 
 negative+CC-900repos and positive+CC-900repos are the dataset with 2 labels, you can also find download it straight from https://github.com/davidleejy/wnut21-cotrain. And we concatenated and randomly shuffled them as dataset.csv 
 
-### The file in the dataset folder is bigger than 500MB, so we have to use git lfs to manage them
+### The file in the dataset folder is larger than GitHub's recommended maximum file size of 50.00 MB, so we have to use git lfs to manage them
 Since the files in the dataset folder is big, you can't git clone this repo to directly get the dataset. You have to do this following commands in the terminal to fully get the datasets.
 1. git lfs install
 2. git lfs pull
