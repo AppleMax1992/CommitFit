@@ -17,6 +17,8 @@ Since the files in the dataset folder is big, you can't git clone this repo to d
 2. git lfs pull
 
 ## Expermental results
+commitfit is the kernel code of our proposed method.
+
 All experiment results are stored in the notebook folder. For example, the folder with the name E-3-1 means, the E(experiment) result on dataset with 3 labels and 1 shots(1 samples for each label). And in each folder Ghadhab-code change.ipynb is to reproduce our method, and Ghadhab is for Ghadhab dataset, multi is for multi-lang dataset, the other file are used to reproduce the baselines.
 
 ## Directory
