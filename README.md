@@ -17,7 +17,8 @@ Since the files in the dataset folder is big, you can't git clone this repo to d
 2. git lfs pull
 
 ## Expermental results
-All experiment results are stored in the notebook folder, for example, the folder with the name E-2-5 means, the E(experiment) result on 2(dataset with 2 labels) with 5 shots(5 samples for each label). 
+All experiment results are stored in the notebook folder. For example, the folder with the name E-3-1 means, the E(experiment) result on dataset with 3 labels and 1 shots(1 samples for each label). And in each folder Ghadhab-code change.ipynb is to reproduce our method, and Ghadhab is for Ghadhab dataset, multi is for multi-lang dataset, the other file are used to reproduce the baselines.
+
 ## Directory
 To avoid the file path-related errors, you are recommended to organize the script as follows: <img src="https://github.com/AppleMax1992/CommitFit/assets/77500295/7002f3f1-ba09-42c6-b2ac-b87ad534d39c" width="100" height="100">
 
